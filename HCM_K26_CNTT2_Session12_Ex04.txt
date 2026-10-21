@@ -1,0 +1,26 @@
+Phần 1. Phân tích Functional vs Non-Functional
+Yêu cầu chức năng (Functional): Tính năng nghiệp vụ khám chữa bệnh như kê đơn thuốc, tạo bệnh án mới, đặt lịch hẹn.
+
+Yêu cầu phi chức năng (Non-Functional): Tiêu chuẩn hệ thống như mã hóa dữ liệu bệnh nhân, phân quyền truy cập, tốc độ phản hồi dưới 2 giây.
+
+Phần 2. Triển khai Clinic-Cloud
+Word (SRS):
+
+Dùng Heading quản lý phân vùng bảo mật (HIPAA/Văn bản pháp quy), Auto TOC ở trang đầu.
+
+Excel (Quản lý 1000 hồ sơ & Xử lý bẫy ô trống):
+
+Xử lý ô trống để AutoFilter không đứt gãy: Tuyệt đối không để dòng trống ngắt quãng data. Với các ô thiếu thông tin, điền tạm giá trị như "Chưa cập nhật" hoặc N/A, không để trắng hoàn toàn.
+
+PowerPoint (Slide số liệu dịch bệnh):
+
+Tiêu đề kết luận: "Tỷ lệ tái khám tăng 30% nhờ hệ thống nhắc lịch tự động"
+
+Dùng Donut Chart tối giản, lược bỏ số liệu rườm rà, tối đa 3-4 ý chính (Miller's Law).
+
+Phần 3. Xử lý lỗi Heading nhầm trong Word
+Khi lỡ tay gán nhầm đoạn văn bản thường thành Heading Styles, gây loạn mục lục:
+
+Bôi đen đoạn văn bị lỗi đó.
+
+Nhấn tổ hợp phím Ctrl + Shift + N để reset về định dạng văn bản chuẩn (Normal Style) ngay lập tức.

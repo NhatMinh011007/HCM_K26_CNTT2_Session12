@@ -1,0 +1,30 @@
+Phần 1. Phân tích VLOOKUP (Nhân viên kho tra hồ sơ)
+lookup_value (Cái cần tìm): Mã vận đơn trên tay shipper.
+
+table_array (Cuốn sổ gốc): Bảng tra giá cước (phải khóa vùng bằng dấu $).
+
+col_index_num (Cột kết quả): Số thứ tự cột chứa "Giá cước" đếm từ trái sang trong sổ.
+
+range_lookup (0 / FALSE): Bắt buộc khớp chính xác mã, không được đoán mò.
+
+Phần 2. Triển khai giải pháp FastMove
+Word (Quy trình kho):
+
+Dùng Heading 1, 2 phân cấp rõ ràng, đồng bộ nhận diện thương hiệu (Cam/Đen) của FastMove để shipper dễ đọc trên điện thoại/máy tính bảng.
+
+Excel (Đối soát giá cước):
+
+Công thức 500 dòng: =VLOOKUP(A2, 'Gia_Cuoc'!$A$2:$B$100, 2, FALSE)
+
+Khóa vùng tìm kiếm bằng $ để khi kéo công thức không bị lệch. Không Merge cell, không chèn dòng trống giữa data.
+
+PowerPoint (Slide KPI giao hàng):
+
+Tiêu đề kết luận (Assertion Title): "Tốc độ xử lý đơn hàng tăng 25% sau khi tự động hóa tra cước"
+
+Dùng Bar Chart trực quan dòng tiền/KPI, tuân thủ Miller's Law (tối đa 3-4 gạch đầu dòng ngắn gọn).
+
+Phần 3. Xử lý lỗi #N/A bằng IFERROR
+Khi mã vận đơn dính ký tự lạ hoặc chưa cập nhật, VLOOKUP sẽ báo #N/A. Bọc hàm lại để bảng sạch sẽ:
+
+=IFERROR(VLOOKUP(A2, 'Gia_Cuoc'!$A$2:$B$100, 2, FALSE), "Kiểm tra lại mã")

@@ -1,0 +1,66 @@
+1. Sơ đồ cây cấu trúc Heading (Word SRS)
+1. Tổng quan hệ thống PTIT-Learning
+
+1.1 Scope module Lớp học ảo
+
+1.2 Giới hạn kỹ thuật
+
+2. Functional Requirements (Lớp học ảo)
+
+2.1 Quản lý phòng học trực tuyến
+
+2.2 Luồng điểm danh tự động
+
+2.3 Phân phòng thảo luận (Breakout rooms)
+
+2.4 Lưu trữ & Phát lại Record
+
+3. Yêu cầu giao diện & Trải nghiệm
+
+3.1 Luồng thao tác sinh viên
+
+3.2 Dashboard giảng viên
+
+4. Non-Functional Requirements
+
+4.1 Băng thông & Độ trễ
+
+4.2 Bảo mật & Phân quyền
+
+2. Triển khai công việc
+Word (SRS):
+
+Tạo khung tài liệu theo đúng sơ đồ 10 Heading 2 ở trên để quản lý qua Navigation Pane (View > Navigation Pane).
+
+Chuẩn bị sẵn mục lục tự động ở trang 1. Trước khi nộp chỉ cần bấm chuột phải vào mục lục chọn Update Field > Update entire table.
+
+Excel (Quản lý 200 khóa học & Sinh viên):
+
+Đặt con trỏ tại hàng Header duy nhất ở dòng 1.
+
+Bấm Ctrl + Shift + L để mở AutoFilter.
+
+Tại cột Khoa: Tích chọn CNTT.
+
+Tại cột Điểm chuyên cần: Chọn Number Filters > Less Than > Gõ 7.
+
+PowerPoint (Slide giới thiệu):
+
+Tôi đã khởi tạo slide HTML với đúng bảng màu: Navy #0b132b, Chữ trắng #ffffff, Accent Cam #ff9f1c để đảm bảo tương phản tối đa.
+
+Bao gồm 4 slide đầy đủ cấu trúc: Title, Tính năng cốt lõi, Flowchart quy trình 4 bước và Slide kết thúc.
+
+3. Kiểm thử: Fix lỗi lọc tên sinh viên trong Excel
+Nếu lọc tên mà không ra kết quả (dù nhìn thấy rõ ràng tên đó trong bảng):
+
+Nguyên nhân: Do dữ liệu dính dấu cách thừa ở đầu hoặc cuối chuỗi (ví dụ "Nguyễn Văn A " hoặc " Nguyễn Văn A").
+
+Cách khắc phục bằng hàm TRIM:
+
+Chèn thêm 1 cột phụ bên cạnh cột Tên (ví dụ cột Tên_Clean).
+
+Dùng công thức =TRIM(A2) (với A2 là ô tên bị lỗi) rồi kéo copy xuống toàn bộ 200 bản ghi.
+
+Bôi đen cột mới > Copy > Paste as Values đè lại vào cột tên gốc.
+
+Xóa cột phụ và bật lại Ctrl + Shift + L để lọc bình thường.

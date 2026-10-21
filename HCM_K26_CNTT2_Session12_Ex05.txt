@@ -1,0 +1,23 @@
+Phần 1. Phân tích AutoFilter ("Google Search của bảng tính")
+AutoFilter hoạt động như một công cụ tìm kiếm thu nhỏ ngay trong bảng log sự cố. Thay vì đọc hàng nghìn dòng dữ liệu thủ công, tính năng này cho phép truy vấn nhanh các trường hợp cụ thể (như lọc riêng loại mã độc Ransomware hoặc các IP đáng ngờ) chỉ trong vài giây.
+
+Phần 2. Triển khai giải pháp NetGuard
+Word (Báo cáo sự cố & Navigation Pane):
+
+Dùng hệ thống Heading (1, 2) phân cấp rõ ràng.
+
+Bật Navigation Pane để kiểm soát bố cục văn bản hàng chục trang.
+
+Chèn Auto TOC tự động ở trang đầu, nhớ cập nhật trước khi xuất file.
+
+Excel (Tra cứu mã độc):
+
+Công thức kết hợp: =VLOOKUP(TRIM(A2), 'DB_Virus'!$A$2:$B$500, 2, FALSE)
+
+Dùng TRIM để bọc bên ngoài giá trị dò tìm, loại bỏ sạch khoảng trắng thừa từ log thô. Cố định vùng tham chiếu bằng dấu $, tuyệt đối không merge cell hay để dòng trống.
+
+PowerPoint (Slide chiến lược phòng thủ):
+
+Tiêu đề kết luận (Assertion Title): "Mô hình phòng thủ 3 tầng chặn đứng hoàn toàn mã độc từ vòng ngoài"
+
+Thiết kế tối giản, bắt buộc dùng font chữ hiện đại, dễ đọc trên máy chiếu như Inter hoặc Montserrat (cấm dùng Times New Roman). Chia ý theo Miller's Law (tối đa 3-4 gạch đầu dòng).

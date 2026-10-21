@@ -1,0 +1,18 @@
+PHẦN 1: HOÀN THIỆN SRS & AUTO TOC
+  Phân cấp Heading: Gán Heading 1 cho các mục chính (1, 2, 3), Heading 2 cho mục con (1.1, 1.2, 2.1, 2.2), và Heading 3 cho mục (2.1.1).
+  Auto TOC: Vào References -> Table of Contents để chèn. Khi nội dung thay đổi số trang, click vào mục lục, nhấn F9 (hoặc Update Field) rồi chọn Update entire table.
+PHẦN 2: CHUẨN HÓA DỮ LIỆU & AUTOFILTER
+ 3 lỗi vi phạm:
+    Hàng 1 gộp ô (A1:E1) làm tiêu đề -> Vi phạm Quy tắc 1 (không merge hàng đầu).
+    Hàng 5 để trống hoàn toàn $\rightarrow$ Vi phạm Quy tắc 4 (không có hàng trống giữa dữ liệu).
+    Hàng 6 chứa dòng Tổng cộng chen giữa bảng -> Vi phạm Quy tắc 2 & 5 (dòng tổng đặt ngoài bảng).
+    Lọc dữ liệu: Bôi đen bảng, nhấn Ctrl + Shift + L để bật AutoFilter, sau đó chọn cột Tình trạng -> tích chọn "Quá hạn".
+PHẦN 3: NỐI DỮ LIỆU BẰNG VLOOKUP
+   Lỗi S099: Trả về #N/A vì mã sách không tồn tại trong bảng tra cứu.
+   Công thức hoàn chỉnh (tại F4):
+  =IFERROR(VLOOKUP(C4, DanhMucSach!$A$2:$C$4, 2, FALSE), "Không tìm thấy sách") 
+   để tự động bắt lỗi và hiển thị thông báo thay thế.
+PHẦN 4: SLIDE BÁO CÁO TIẾN ĐỘ
+   Assertion Title: "Dữ liệu phiếu mượn Tháng 10 đã được chuẩn hóa 100%: Phát hiện 25% quá hạn và 1 mã lỗi".
+   Biểu đồ: Dùng Donut Chart thể hiện tỷ lệ các trạng thái mượn sách.
+   Rule 10/20/30: Slide này chiếm 1/10 tổng slide, thời lượng trình bày khoảng 2 phút, sử dụng cỡ chữ tối thiểu 30pt.

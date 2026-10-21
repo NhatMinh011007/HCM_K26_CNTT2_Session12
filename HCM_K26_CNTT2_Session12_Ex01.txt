@@ -1,0 +1,37 @@
+1. Phân tích Excel
+
+Field (Cột): Mã GD, Mã SV, Tên SV, Số tiền, Thời gian, Trạng thái.
+
+Record (Dòng): 1 giao dịch cụ thể của sinh viên.
+
+2. Triển khai
+
+Word (SRS 5 trang):
+
+Tạo Auto TOC trang 1.
+
+H1: 1. Tổng quan | 2. Giao diện UX/UI | 3. Tính năng Hoàn tiền | 4. Yêu cầu phi chức năng | 5. Phụ lục.
+
+H2: Chi tiết mục 1 (Mục tiêu, Phạm vi) & mục 3 (Quy tắc tích điểm, Luồng hoàn tiền).
+
+Excel (Đối soát):
+
+Formula: =VLOOKUP(TRIM(B2), 'Data_User'!$A$2:$B$100, 2, FALSE)
+
+Quy tắc: Không merge cell, không bỏ dòng trống, dùng TRIM lọc khoảng trắng.
+
+PowerPoint (Slide dòng tiền):
+
+Title: "Doanh thu tăng 18% nhờ ưu đãi nạp tiền học phí".
+
+Font >= 30pt, vẽ biểu đồ cột Thu - Chi thay cho bảng số liệu thô.
+
+3. Check lỗi #N/A (4 bước)
+
+Khoảng trắng: Check dấu cách thừa (xử lý bằng TRIM).
+
+Định dạng: Đồng bộ kiểu dữ liệu (Text vs Number) ở cả 2 bảng.
+
+Công thức: Cột mã phải nằm ở bên trái, cố định vùng tìm kiếm ($).
+
+Data: Check mã có thực sự tồn tại trong bảng gốc hay không.

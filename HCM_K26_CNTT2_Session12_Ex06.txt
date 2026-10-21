@@ -1,0 +1,34 @@
+Phần 1. Phân tích: Excel "Xấu" vs "Đúng"
+Bảng Xấu: Gộp ô lung tung (Merge Cell), để dòng trống ngắt quãng giữa các bản ghi, dữ liệu thô dính khoảng trắng ẩn, có hàng tổng cộng chèn ngang giữa bảng. Kết quả là hàm và AutoFilter không chạy được.
+
+Bảng Đúng: Cấu trúc chuẩn Database (mỗi cột là 1 Field, mỗi dòng là 1 Record), hàng đầu tiên là Header duy nhất, không dùng Merge Cell trong vùng dữ liệu, dữ liệu sạch.
+
+Phần 2. Triển khai dự án Smart-Home
+Word (SRS hệ thống đấu giá - 3 cấp Heading):
+
+Heading 1: 1. Tổng quan dự án | 2. Yêu cầu tính năng | 3. Phi chức năng
+
+Heading 2: 2.1 Quản lý tài khoản | 2.2 Quy trình đấu giá trực tuyến
+
+Heading 3: 2.2.1 Đặt cọc giữ chỗ | 2.2.2 Khớp lệnh trả giá theo thời gian thực
+
+Dùng Navigation Pane kiểm soát và chèn Auto TOC ở đầu trang.
+
+Excel (Tính hoa hồng & Giá thuê):
+
+Công thức tra cứu hoa hồng: =VLOOKUP(TRIM(A2), 'Bang_Chieu_Khau'!$A$2:$B$50, 2, FALSE)
+
+Tuân thủ tuyệt đối: Không Merge Cell, không dòng trống, dùng TRIM bọc giá trị tìm kiếm.
+
+PowerPoint (Pitch Deck gọi vốn - Rule 10/20/30):
+
+Tối đa 10 slide, chừa nhiều White Space để thoáng mắt.
+
+Tiêu đề kết luận (Assertion Title): "Nền tảng đấu giá Smart-Home tối ưu 40% thời gian giao dịch bất động sản"
+
+Font hiện đại (Inter/Montserrat), tối đa 3-4 ý mỗi slide.
+
+Phần 3. Kiểm thử: Sửa lỗi trôi vùng dữ liệu bằng dấu $
+Khi kéo công thức VLOOKUP xuống dưới mà vùng tham chiếu bị nhảy (ví dụ từ $A$2:$B$50 thành $A$3:$B$51 dẫn đến lỗi kết quả):
+
+Cách sửa: Thêm dấu $ trước tên cột và số hàng của bảng tra cứu để cố định tuyệt đối vùng dữ liệu (ví dụ: đổi thành 'Bang_Chieu_Khau'!$A$2:$B$50). Khi kéo công thức xuống, ô kết quả sẽ không bao giờ bị lệch bảng nguồn nữa.
